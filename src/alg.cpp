@@ -25,11 +25,11 @@ return (calcItem(x, count) + expn(x, count-1));
 double sinn(double x, uint16_t count) {
 if (count == 1) return x;
 if (count % 2 == 0) return (sinn(x, count-1) - calcItem(x, 2*count-1));
-if (count % 2 != 0) return (sinn(x, count-1) + calcItem(x, 2*count-1));
+return (sinn(x, count-1) + calcItem(x, 2*count-1));
 }
 
 double cosn(double x, uint16_t count) {
 if (count == 1) return 1;
 if (count % 2 == 0) return (cosn(x, count-1) - calcItem(x, 2*count-2));
-if (count % 2 != 0) return (cosn(x, count-1) + calcItem(x, 2*count-2));
+return (cosn(x, count-1) + calcItem(x, 2*count-2));
 }
